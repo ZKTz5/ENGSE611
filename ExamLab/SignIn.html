@@ -9,18 +9,22 @@
 </head>
 
 <body>
-    <table style="border: 1px solid black; padding: 20px; width: 400px; margin: 20px auto;">
+    <table border="1" cellpadding="20" cellspacing="0" width="400px" height="500px" align="center">
         <tr>
             <td>
                 <header>
                     <h2>
-                        <font face="tahoma">สมัคร &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3">x</font>
+                        <font face="tahoma">สมัคร
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </font>
+                        <font size="2">x</font>
                     </h2>
                     <p>
                         <font face="tahoma" size="2" color="#606770">ง่ายและเร็ว</font>
                     </p>
                     <p>
-                        <font face="tahoma" size="2" color="#606770">---------------------------------------------------------------------------------------</font>
+                        <font face="tahoma" size="2" color="#606770">
+                            --------------------------------------------------------------------------</font>
                     </p>
                 </header>
 
@@ -29,17 +33,17 @@
                         <table>
                             <tr>
                                 <td><input type="text" placeholder="ชื่อ" id="firstname" name="firstname"
-                                        style="width: 100%; box-sizing: border-box;" required><br><br></td>
+                                        required><br><br></td>
                                 <td><input type="text" placeholder="นามสกุล" id="lastname" name="lastname"
-                                        style="width: 100%; box-sizing: border-box;" required><br><br></td>
+                                        required><br><br></td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input type="email" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล"
-                                        id="email" name="email" style="width: 100%; box-sizing: border-box;" required><br><br></td>
-                            </tr>
+                                        id="email" name="email" required><br><br></td>
+                            </tr width="100">
                             <tr>
-                                <td colspan="2"><input type="password" placeholder="รหัสผ่าน" id="password"
-                                        name="password" style="width: 100%; box-sizing: border-box;" required><br><br></td>
+                                <td colspan="2" width="100"><input type="password" placeholder="รหัสผ่าน" id="password"
+                                        name="password" width="100px" required><br><br></td>
                             </tr>
                         </table>
                     </section>
@@ -77,27 +81,43 @@
                         <p>
                             <font face="tahoma" color="#606770">เพศ</font>
                         </p>
-                        <table width="100%" cellspacing="10">
+                        <table border="0" width="100%" cellpadding="4" cellspacing="0">
                             <tr>
-                                <td>
-                                    <table border="1" cellspacing="0" cellpadding="5" width="100%">
+                                <!-- หญิง -->
+                                <td width="50%">
+                                    <table border="1" width="100%" cellpadding="6" cellspacing="0">
                                         <tr>
                                             <td>
-                                                <label for="female"><font face="tahoma" size="2" >หญิง</font></label>
-                                                <input type="radio" id="female" name="gender">
+                                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td align="left">
+                                                            <font face="Tahoma" size="2">หญิง</font>
+                                                        </td>
+                                                        <td align="right">
+                                                            <input type="radio" name="gender" value="female">
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
 
-                                <td>
-                                    <table cellspacing="0" cellpadding="5" width="100%">
-                                        <tr >
-                                            <td >
-                                                <label for="female"><font face="tahoma" size="2">หญิง</font></label>
-                                                </td>
-                                                <td align="right">
-                                                <input type="radio" id="female" name="gender" >
+                                <!-- ชาย -->
+                                <td width="50%">
+                                    <table border="1" width="100%" cellpadding="6" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td align="left">
+                                                            <font face="Tahoma" size="2">ชาย</font>
+                                                        </td>
+                                                        <td align="right">
+                                                            <input type="radio" name="gender" value="male">
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </td>
                                         </tr>
                                     </table>
@@ -108,16 +128,20 @@
 
                     <section>
                         <p>
-                            <font face="tahoma" size="2" color="#606770">เมื่อคลิก สมัคร แสดวงว่าคุณยอมรับข้อกำหนดนโยบายข้อมูล และ นโยบายคุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเราและสามารถเลือกไม่รับได้ในภายหลัง</font>
+                            <font face="tahoma" size="2" color="#606770">เมื่อคลิก สมัคร
+                                แสดวงว่าคุณยอมรับข้อกำหนดนโยบายข้อมูล และ นโยบายคุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง
+                                SMS จากเราและสามารถเลือกไม่รับได้ในภายหลัง</font>
                         </p>
                     </section>
 
                     <section>
-                        <table style="width: 100%; height: auto;">
+                        <table width="100%">
                             <tr>
-                                <td><button type="submit" style="width: 100%; height: 40px;">
+                                <td>
+                                    <button type="submit" ">
                                         <font face="tahoma" size="2">สมัคร</font>
-                                    </button></td>
+                                    </button>
+                                </td>
                             </tr>
                         </table>
                     </section>
