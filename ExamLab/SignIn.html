@@ -1,42 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สมัครง่ายและเร็ว</title>
+    <font face="tahoma" size="2" color="#606770"></font>
 </head>
+
 <body>
-    <header>
-        <h2>สมัคร</h2>
-        <p>ง่ายและเร็ว</p>
-    </header>
+    <table style="border: 1px solid black; padding: 20px; width: 400px; margin: 20px auto;">
+        <tr>
+            <td>
+                <header>
+                    <h2>
+                        <font face="tahoma">สมัคร &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3">x</font>
+                    </h2>
+                    <p>
+                        <font face="tahoma" size="2" color="#606770">ง่ายและเร็ว</font>
+                    </p>
+                    <p>
+                        <font face="tahoma" size="2" color="#606770">---------------------------------------------------------------------------------------</font>
+                    </p>
+                </header>
 
-    <main>
-        <section>
-                <table>
-                    <tr>
-                        <td><input type="text" placeholder="ชื่อ" id="firstname" name="firstname" required><br><br></td>
-                        <td><input type="text" placeholder="นามสกุล" id="lastname" name="lastname" required><br><br></td>
-                    </tr>
-                    <tr>
-                        <th><input type="email" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" id="email" name="email" required><br><br></th>
-                    </tr>
-                    <tr>
-                        <td><input type="password" placeholder="รหัสผ่าน" id="password" name="password" required><br><br></td>
-                    </tr>
-                </table>
-        </section>        
+                <main>
+                    <section>
+                        <table>
+                            <tr>
+                                <td><input type="text" placeholder="ชื่อ" id="firstname" name="firstname"
+                                        style="width: 100%;" required><br><br></td>
+                                <td><input type="text" placeholder="นามสกุล" id="lastname" name="lastname"
+                                        style="width: 100%;" required><br><br></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="email" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล"
+                                        id="email" name="email" style="width: 100%;" required><br><br></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="password" placeholder="รหัสผ่าน" id="password"
+                                        name="password" style="width: 100%;" required><br><br></td>
+                            </tr>
+                        </table>
+                    </section>
 
-        <section>
-            <p>เพศ</p>
-            <table>
-                <tr>
-                    <td><input type="radio" id="female" name="gender" required> </td>
-                    <td><input type="radio" id="male" name="gender" required> </td>
-                </tr>
-            </table>
+                    <section>
+                        <p>
+                            <font face="tahoma" color="#606770">วันเกิด</font>
+                        </p>
+                        <form>
+                            <table cellspacing="5">
+                                <tr>
+                                    <td>
+                                        <select name="day" id="day" required>
+                                            <option value="" disabled selected>14</option>
+                                            <option value="14">14</option>
+                                    </td>
+                                    <td>
+                                        <select name="month" id="month" required>
+                                            <option value="" disabled selected>ก.ย.</option>
+                                            <option value="sep">ก.ย.</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="year" id="year" required>
+                                            <option value="" disabled selected>2020</option>
+                                            <option value="2020">2020</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </section>
 
-        </section>
-    </main>
+                    <section>
+                        <p>
+                            <font face="tahoma" color="#606770">เพศ</font>
+                        </p>
+                        <table border="1" cellspacing="0" cellpadding="5" style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <label for="female">
+                                        <font face="tahoma" size="2">หญิง</font>
+                                    </label>
+                                    <input type="radio" id="female" name="gender" required>
+                                </td>
+                                <td>
+                                    <label for="male">
+                                        <font face="tahoma" size="2">ชาย</font>
+                                    </label>
+                                    <input type="radio" id="male" name="gender" required>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+
+                    <section>
+                        <p>
+                            <font face="tahoma" size="2" color="#606770">เมื่อคลิก สมัคร แสดวงว่าคุณยอมรับข้อกำหนดนโยบายข้อมูล และ นโยบายคุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเราและสามารถเลือกไม่รับได้ในภายหลัง</font>
+                        </p>
+                    </section>
+
+                    <section>
+                        <table style="width: 100%; height: auto;">
+                            <tr>
+                                <td><button type="submit" style="width: 100%; height: 40px;">
+                                        <font face="tahoma" size="2">สมัคร</font>
+                                    </button></td>
+                            </tr>
+                        </table>
+                    </section>
+                </main>
+            </td>
+        </tr>
+    </table>
 </body>
+
 </html>
