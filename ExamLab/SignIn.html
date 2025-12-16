@@ -29,17 +29,17 @@
                         <table>
                             <tr>
                                 <td><input type="text" placeholder="ชื่อ" id="firstname" name="firstname"
-                                        style="width: 100%;" required><br><br></td>
+                                        style="width: 100%; box-sizing: border-box;" required><br><br></td>
                                 <td><input type="text" placeholder="นามสกุล" id="lastname" name="lastname"
-                                        style="width: 100%;" required><br><br></td>
+                                        style="width: 100%; box-sizing: border-box;" required><br><br></td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input type="email" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล"
-                                        id="email" name="email" style="width: 100%;" required><br><br></td>
+                                        id="email" name="email" style="width: 100%; box-sizing: border-box;" required><br><br></td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input type="password" placeholder="รหัสผ่าน" id="password"
-                                        name="password" style="width: 100%;" required><br><br></td>
+                                        name="password" style="width: 100%; box-sizing: border-box;" required><br><br></td>
                             </tr>
                         </table>
                     </section>
@@ -77,19 +77,30 @@
                         <p>
                             <font face="tahoma" color="#606770">เพศ</font>
                         </p>
-                        <table border="1" cellspacing="0" cellpadding="5" style="width: 100%;">
+                        <table width="100%" cellspacing="10">
                             <tr>
                                 <td>
-                                    <label for="female">
-                                        <font face="tahoma" size="2">หญิง</font>
-                                    </label>
-                                    <input type="radio" id="female" name="gender" required>
+                                    <table border="1" cellspacing="0" cellpadding="5" width="100%">
+                                        <tr>
+                                            <td>
+                                                <label for="female"><font face="tahoma" size="2" >หญิง</font></label>
+                                                <input type="radio" id="female" name="gender">
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
+
                                 <td>
-                                    <label for="male">
-                                        <font face="tahoma" size="2">ชาย</font>
-                                    </label>
-                                    <input type="radio" id="male" name="gender" required>
+                                    <table cellspacing="0" cellpadding="5" width="100%">
+                                        <tr >
+                                            <td >
+                                                <label for="female"><font face="tahoma" size="2">หญิง</font></label>
+                                                </td>
+                                                <td align="right">
+                                                <input type="radio" id="female" name="gender" >
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
                         </table>
