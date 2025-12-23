@@ -124,6 +124,14 @@
             text-decoration: none;
         }
         
+        .line-height-1x5 {
+            line-height: 1.5;
+        }
+
+        .line-height-24 {
+            line-height: 24px;
+        }
+
         .bg-color1 {
             background-color: lightblue;
         }
@@ -137,6 +145,30 @@
 
         .bg-all {
             background: url('bg.jpg') no-repeat center / cover;
+        }
+
+        .box-color {
+            width: 300px;
+            height: 120px;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        .box-img {
+            width: 300px;
+            height: 300px;
+            background-image: url('Pic/MyPhoto1.jpg');
+            background-size: cover;         /*ปรับให้รูปเต็มกรอบ*/
+            background-repeat: no-repeat;   /*ไม่ต้องการให้รูปซ้ำ*/
+            background-position: center;    /*จัดให้รูปอยู่ตรงกลาง*/
+            border: 2px solid #333;
+        }
+
+        .box-short {
+            width: 300px;
+            height: 300px;
+            background: url('Pic/MyPhoto1.jpg')  no-repeat center / cover;
+            border: 2px;
         }
 
     </style>
@@ -201,9 +233,17 @@
     <p class="line-throgh">ข้อความนี้ขีดฆ่า (line-throgh)</p>
     <p class="none">ข้อความนี้ไม่มีการตกแต่ง</p>
 
+    <h2>3.การกำหนดระยะบรรทัด (line-height)</h2>
+    <p class="line-height-1x5">ระยะบรรทัด 1.5เท่า - เหมาะกับการอ่านแบบสบายตา</p>
+    <p class="line-height-24">ระยะบรรทัด 24px - ควบคุมความสูงบรรทัดแแบบคงที่</p>
+    <p>-</p>
 
+    <h1>Background Propperties</h1>
+    <div class="box-color">Example 1 Testtest1234567890-=</div>
+    <div class="box-img"></div>
+    <div class="box-short"></div>
 
-
+    
 </body>
 
 </html>
