@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            color: green;
+        }
+
+        .highlight {
+            background: yellow;
+            padding: 5px;
+        }
+
+        #Header {
+            background: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        .ph:hover {
+            color: red;
+            background-color: blueviolet;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            border-color: rgb(255, 0, 128);
+            outline: none;
+            background-color: gray;
+        }
+
+        .body1 {
+            font-family: Sans-Serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .body2 {
+            font-family: Serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .body3 {
+            font-family: Serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .parent {
+            font-size: 16px;
+            border: 2px solid gray;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .child-title {
+            font-size: 2em;
+            color: red;
+            font-weight: bold;
+        }
+
+        .child-text {
+            font-size: 1.2em;
+            color: darkgray;
+        }
+
+        .fixed-text {
+            font-size: 18px;
+            color: cadetblue;
+        }
+
+        .h1 {
+            font-size: 40px;
+            text-shadow: 5px 5px 5px red;
+        }
+
+        .p {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            word-wrap: break-word;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-justify {
+            text-align: justify;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .line-throgh {
+            text-decoration: line-through;
+        }
+
+        .none {
+            text-decoration: none;
+        }
+        
+        .bg-color1 {
+            background-color: lightblue;
+        }
+
+        .bg-img {
+            background-image: url('image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .bg-all {
+            background: url('bg.jpg') no-repeat center / cover;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>ตัวอย่าง CSS Selectors</h1>
+
+    <p>ข้อความนี้ถูกจัดสีด้วย Element Selector (p { color: green; })</p>
+    <p class="highlight">ข้อความนี้ถูกจัดสไตล์ด้วย Class Selector ().highlight)</p>
+    <div id="Header">คือพื้นที่ Header (ID Selector)</div>
+    <p>-</p>
+
+    <h2>Pseudo-class :hover</h2>
+    <p>นำเมาส์มาวางบนข้อความนี้เพื่อดูเอฟเฟฟต์</p>
+    <p>-</p>
+
+    <h2>Attribute Selector [type="text"]</h2>
+    <input type="text" placeholder="พิมพ์ข้อความที่นี่">
+    <p></p>
+
+    <h2>Fonts</h2>
+    <p class="body1">Body1 Test Font Style</p>
+    <p class="body2">Body2 Test Font Style</p>
+    <p class="body3">Body3 Test Font Style</p>
+
+    <h2>สาธิต Font-size: Parent → Child (em)</h2>
+
+    <form id="fontForm">
+        <label>ใส่ขนาดฟอนต์ Parent (px): </label>
+        <input type="number" id="fontSizeInput" value="16" min="10" max="40">
+        <button type="submit">ปรับขนาดฟอนต์</button>
+    </form>
+
+    <div class="parent" id="parentBox">
+        <p class="child-title">หัวข้อหลัก (2em)</p>
+        <p class="child-text">ข้อความย่อย (1.2em) → เปลี่ยนตาม Parent</p>
+        <p class="fixed-text">ข้อความแบบ px (18px) → ไม่เปลี่ยน</p>
+    </div>
+
+    <script>
+        document.getElementById("fontForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const newSize = document.getElementById("fontSizeInput").value;
+            document.getElementById("parentBox").style.fontSize = newSize + "px";
+        });
+    </script>
+
+    <h1 class="h1">Text-shadow effect</h1>
+    <p class="p">TEXT 1234567890-=qwertyuiop[]asdfghjkl;'\</p>
+
+    <h1>Text Properties - Example</h1>
+    <h2>1.การจัดแนวข้อความ (Text-align)</h2>
+    <p class="align-left">ชิดซ้าย</p>
+    <p class="align-center">ตรงกลาง</p>
+    <p class="align-right">ชิดขวา</p>
+    <p class="align-justify">ให้มันจัดเอง 1234567890-=1234567890-=1234567890-=1234567890-=</p>
+
+    <h2>2.การตกแต่งข้อความ (Text-decoration)</h2>
+    <p class="underline">ข้อความนี้ขีดเส้นใต้ (underline)</p>
+    <p class="line-throgh">ข้อความนี้ขีดฆ่า (line-throgh)</p>
+    <p class="none">ข้อความนี้ไม่มีการตกแต่ง</p>
+
+
+
+
+</body>
+
+</html>
