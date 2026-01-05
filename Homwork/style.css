@@ -6,6 +6,7 @@ p {
     background: LemonChiffon;
     padding: 3px 8px;
     border-radius: 4px;
+    display: inline-block
 }
 
 #Header {
@@ -40,8 +41,12 @@ input[type="text"]:focus {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    color: DarkSlateBlue;
+    font-size: 16px;
+    color: rgb(35, 30, 59);
+}
+
+.body2 {
+    font-size: 14px;
 }
 
 .parent {
@@ -55,8 +60,8 @@ input[type="text"]:focus {
 }
 
 .child-title {
-    font-size: 2.2em;
-    color: DarkSlateBlue;
+    font-size: 1.6em;
+    color: rgb(65, 49, 172);
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -133,8 +138,8 @@ input[type="text"]:focus {
 
 .box-short {
     width: 200px;
-    height: 200px;
+    height: 250px;
     background: url('Pic/MyPhoto1.jpg') no-repeat center / cover;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 4px rgba(0,0,0,0.1);
 }
