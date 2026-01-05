@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,42 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Krittaphat-Portfolio</h1>
+
+<body class="bg-color1">
+    <header id="Header">
+        <h1 class="h1">Krittaphat-Portfolio</h1>
     </header>
     <!-- เมนูนำทาง -->
     <nav>
         <ul>
-            <li><a href="#About">About Me</a></li>
-            <li><a href="#Skills">My Coding Skills</a></li>
-            <li><a href="#Contact">Contact Me</a></li>
+            <li><a href="#About" class="ph none">About Me</a></li>
+            <li><a href="#Skills" class="ph none">My Coding Skills</a></li>
+            <li><a href="#Contact" class="ph none">Contact Me</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="parent">
         <!--แนะนำตัวเอง-->
         <section id="About">
-            <h2>About Me</h2>
-            <p>Hello! My name is Krittaphat Mongkolklee. Welcome to my portfolio website where I showcase my skills.</p>
-            <img src="Pic/MyPhoto1.JPG" alt="MyPhoto" width="200">
-            <h2>My Education</h2>
-            <ul>
+            <h2 class="child-title">About Me</h2>
+            <p class="highlight">Hello! My name is Krittaphat Mongkolklee. Welcome to my portfolio website where I
+                showcase my skills.</p>
+            <div class="box-short"></div> <img src="Pic/MyPhoto1.JPG" alt="MyPhoto" width="200" style="display:none;">
+            <h2 class="child-title">My Education</h2>
+            <ul class="body1">
                 <li>High School(2021-2024): Lanna Polytechnic Chiangmai Technological College </li>
                 <li>University(2025-Now): Rajamangala University of Technology Lanna (SE)</li>
             </ul>
 
         </section>
+
         <!--ทักษะการเขียนโปรแกรม-->
         <section id="Skills">
-            <h2>My Coding Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>C</li>
-                <li>JAVA</li>
+            <h2 class="child-title">My Coding Skills</h2>
+            <ul class="line-height-1x5">
+                <li class="body2">HTML</li>
+                <li class="body2">C</li>
+                <li class="body3">JAVA</li>
             </ul>
         </section>
         <!--ตารางเวลาเรียน-->
@@ -47,11 +51,11 @@
             <h2>My Schedule</h2>
             <table width="50%" hight="100%" border="1" cellspacing="0" cellpadding="5">
 
-                <tr>
+                <tr class="bg-color1">
                     <th colspan="3">Weekly Class Schedule</th>
                 </tr>
 
-                <tr>
+                <tr class="fixed-text">
                     <th>Day</th>
                     <th>Morning</th>
                     <th>Afternoon</th>
@@ -91,29 +95,32 @@
         </section>
         <!--ฝากข้อความ-->
         <section id="Contact">
-            <form>
-                <h3>Contact Me</h3>
-                <label>Name:</label>
-                <input type="text" name="name">
-                <br><br>
-                <label>Email:</label>
-                <input type="email" name="email">
-                <br><br>
-                <label>Message:</label>
-                <br><br>
-                <textarea name="message" rows="4" cols="50"></textarea>
-                <br><br>
-                <button type="submit">Submit</button>
-            </form>
+            <div style="max-width: 450px;">
+                <form>
+                    <h3 class="child-title">Contact Me</h3>
+                    <label class="fixed-text">Name:</label>
+                    <input type="text" name="name">
+                    <br><br>
+                    <label class="fixed-text">Email:</label>
+                    <input type="email" name="email">
+                    <br><br>
+                    <label class="fixed-text">Message:</label>
+                    <br><br>
+                    <textarea name="message" rows="4" cols="50" class="p"></textarea>
+                    <br><br>
+                    <button type="submit" class="ph">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
     <!--ส่วนท้าย-->
-    <footer>
-        <p>Follow me :)</p>
+    <footer class="align-center">
+        <p class="none">Follow me :)</p>
         <p>
-            <a href="https://www.instagram.com/z.ktphat/" target="_blank">z.ktphat</a>
+            <a href="https://www.instagram.com/z.ktphat/" target="_blank" class="ph underline">z.ktphat</a>
         </p>
     </footer>
 
 </body>
+
 </html>
