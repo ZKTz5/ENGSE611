@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin: 20px;
+
+    }
+    .box {
+      width: 200px;
+      padding: 20px;
+      border: 5px solid #0077ff;
+      margin: 20px;
+      background-color: #cce5ff;
+    }
+
+    /* ตัวอย่างแบบปกติ (content-box) */
+    .content-box {
+      box-sizing: content-box;
+    }
+
+    /* ตัวอย่างแบบ border-box */
+    .border-box {
+      box-sizing: border-box;
+      background-color: #ffd8cc;
+    }
+
+    .border-1 {
+      border-style: dotted;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .border-2 {
+      border-style: outset;
+      border-radius: 30px 30px 0 0;
+      box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /*Display Properties*/
+    .block-div {
+      display: block;
+      padding: 10px;
+      margin-bottom: 5px;
+      background-color: antiquewhite;
+    }
+
+    .inline-span {
+      display: inline;
+      padding: 5px;
+      margin-right: 5px;
+      background-color: rgb(63, 255, 191);
+      border-style: dotted;
+    }
+
+    .inline-block-div {
+      display: inline-block;
+      width: 150px;
+      height: 50px;
+      padding: 10px;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 40px;
+      background-color: lightcoral;
+      border: 5px groove black;
+    }
+    
+    .container {
+      display: flex;
+    }
+
+    .flex-box {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      background-color: rgb(236, 236, 236);
+      padding: 10px;
+      border: 2px dotted black;
+      height: 150px;
+    }
+
+    .flex-box2 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: rgb(236, 236, 236);
+      padding: 10px;
+      border: 2px dotted black;
+      height: 150px;
+    }
+
+    .item {
+      background-color: rgb(145, 50, 235);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .stretch .item {
+      background: teal;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h2>CSS Box Model</h2>
+
+  <h3>1) box-sizing: content-box (ค่าปกติ)</h3>
+  <div class="box content-box border-1">
+    ความกว้างที่กำหนด = 200px
+    (ไม่รวม padding + border)
+  </div>
+
+  <h3>2) box-sizing: border-box</h3>
+  <div class="box border-box border-2">
+    ความกว้างที่กำหนด = 200px
+    (รวม padding + border อยู่ใน 200px)
+  </div>
+  <br></br>
+  
+  <h2>Display Properties Examples</h2>
+  <h3>1)Block</h3>
+  <div class="block-div">Block1</div>
+  <div class="block-div">Block2</div>
+
+  <h3>2)Inline</h3>
+  <span class="inline-span">Inline1</span>
+  <span class="inline-span">Inline2</span>
+  <span class="inline-span">Inline3</span>
+
+  <h3>3)inline-block</h3>
+  <div class="inline-block-div">Box1</div>
+  <div class="inline-block-div">Box2</div>
+  <div class="inline-block-div">Box3</div>
+  <br></br>
+
+  <h2>Flexbox (row layout)</h2>
+  <h3>1)justify-content: center</h3>
+  <div class="flex-box" style="justify-content: center;">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <h3>2)justify-content: space-between</h3>
+  <div class="flex-box" style="justify-content: space-between;">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <h3>3)align-item: center</h3>
+  <div class="flex-box" style="align-items: center;">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <h3>4)align-item: stretch</h3>
+  <div class="flex-box stretch" style="align-items: stretch;">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+  <br></br>
+
+  <h2>Flexbox (column layout)</h2>
+  <h3>1)justify-content: center</h3>
+  <div class="flex-box2" style="justify-content: center;">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <h3>2)justify-content: space-between</h3>
+  <div class="flex-box2" style="justify-content: space-between;">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <h3>3)align-item: center</h3>
+  <div class="flex-box2" style="align-items: center;">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <h3>4)align-item: stretch</h3>
+  <div class="flex-box2 stretch" style="align-items: stretch;">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+  <br></br>
+
+</body>
+
+</html>
