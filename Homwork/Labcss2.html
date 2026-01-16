@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabCSS2</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            margin: 0;
+            color: white;
+            min-height: 100vh;
+
+        }
+
+        .menu-container {
+            background-color: #1d7fff;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            align-items: center;
+        }
+
+        li {
+            padding: 15px 0;
+        }
+
+        ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+
+        ul li h3 {
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .content-container {
+            background-color: #e0e0e0;
+            color: #1f2937;
+            padding: 30px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                grid-template-columns: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center">โจทย์ที่ 2: 2-Column Layout ด้วย CSS Grid</h1>
+
+    <div class="container">
+        <div class="menu-container">
+            <ul>
+                <li>
+                    <h3>เมนู</h3>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content-container">
+            <h2>ยินดีต้อนรับ</h2>
+            <p>นี่คือเนื้อหาหลักของเว็บไซต์</p>
+            <p>ลองทดสอบย่อ-ขยายหน้าจอเพื่อดู Responsive Layout</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
