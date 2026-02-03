@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX7</title>
+</head>
+<body>
+    <div id="outputBox">ผลลัพธ์จะแสดงที่นี่</div>
+    <button onclick="runDemo()">Run Code</button>
+
+    <script>
+        function runDemo() {
+            const output = [];
+
+            //ค่ารเิ่มต้น
+            let score = 72;
+
+            //เงื่อนไข if else
+            if (score >= 50) {
+                output.push("ผลสอบ: ผ่าน");
+                console.log("ผลสอบ: ผ่าน");
+            } else {
+                output.push("ผลสอบ: ไม่ผ่าน");
+                console.log("ผลสอบ: ไม่ผ่าน");
+            }
+
+            //วน loop for 5 รอบ
+            for (i=0; i<5; i++) {
+                output.push("รอบที่ " + (i+1));
+                console.log("รอบที่ " + (i+1));
+            }
+
+            document.getElementById("outputBox").innerText = output.join("\n");
+            
+        }
+    </script>
+</body>
+</html>

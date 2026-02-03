@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript EX3</title>
+</head>
+<body>
+    
+    <h1>JavaScript แบบฝังใน html</h1>
+
+    <button onclick="runDemo()">Run Code</button>
+    <script>
+        function runDemo() {
+            //clear console ทุกครั้งที่รัน เพื่อไม่ให้สับสนกับผลเก่า
+            console.clear();
+            const output = [];
+
+            let aString = "Hello";
+            let aNumber = 42;
+            let aBoolean = true;
+            let anUndefined;
+            let aNull = null;
+
+            console.log('Type of aString: ' + typeof aString);
+            console.log('Type of aNumber: ' + typeof aNumber);
+            console.log('Type of aBoolean: ' + typeof aBoolean);
+            console.log('Type of anUndefined: ' + typeof anUndefined);
+            console.log('Type of aNull: ' + typeof aNull); // จะได้ "object" เนื่องจากข้อจำกัดของ JavaScript
+        }
+
+        console.log("โค้ดใน script กำลังทำงาน...");
+    </script>
+</body>
+</html>

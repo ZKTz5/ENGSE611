@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript EX4</title>
+</head>
+<body>
+    
+    <h1>String Methods & Template Literals</h1>
+
+    <pre id="output">ผลลัพธ์จะแสดงที่นี่</pre>
+    <button onclick="showMessage()">Run Code</button>
+
+    <script>
+        function showMessage() {
+            console.clear();
+            const output = [];
+
+            let text = 'JavaScript เจ๋งมาก';
+            let firstName = 'สมชาย';
+
+            // Template Literals
+            output.push(`สวัสดี ${firstName}`);
+            console.log(`สวัสดี ${firstName}`);
+            // String Methods
+            output.push(`ความยาว: ${text.length}`);
+            console.log(`ความยาว: ${text.length}`);
+
+            output.push(`ตัวใหญ่: ${text.toUpperCase()}`);
+            console.log(`ตัวใหญ่: ${text.toUpperCase()}`);
+
+            output.push(`ตัวเล็ก: ${text.toLowerCase()}`);
+            console.log(`ตัวเล็ก: ${text.toLowerCase()}`);
+
+            output.push(`มี "Java"? ${text.includes('Java')}`);
+            console.log(`มี "Java"? ${text.includes('Java')}`);
+
+            output.push(`ตำแหน่ง "Script": ${text.indexOf('Script')}`);
+            console.log(`ตำแหน่ง "Script": ${text.indexOf('Script')}`);
+
+            output.push(`ตัดคำ (0-4): ${text.slice(0, 4)}`);
+            console.log(`ตัดคำ (0-4): ${text.slice(0, 4)}`);
+
+            output.push(`แทนที่: ${text.replace('เจ๋ง', 'สุดยอด')}`);
+            console.log(`แทนที่: ${text.replace('เจ๋ง', 'สุดยอด')}`);
+
+            // แสดงผลลัพธ์ทั้งหมดบนหน้าเว็บ
+            document.getElementById('output').textContent = output.join('\n');
+
+            //สแดงผลบน console
+            console.clear();
+            output.forEach(line => console.log(`> ${line}`));
+        }
+
+        console.log("โค้ดใน script กำลังทำงาน...");
+    </script>
+</body>
+</html>
