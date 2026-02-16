@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Switch</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #output { 
+            background-color: #121212; 
+            color: #ffffff; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin-bottom: 10px;
+            white-space: pre-line; 
+            width: fit-content;
+            min-width: 250px;
+            border-left: 5px solid #e7ac21;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1e6177;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:active { background-color: #144a5b; }
+    </style>
+</head>
+<body>
+
+    <div id="output">ผลลัพธ์จะแสดงที่นี่</div>
+    <button onclick="runDemo()">Run Code</button>
+
+    <script>
+        function runDemo() {
+            const output = [];
+
+            let score = Math.floor(Math.random() * 101);    //สุ่มคะแนน 0-100 
+            let grade = "";
+            let pass = "";
+            let description = "";
+
+            //grade
+            if (score >= 80) {
+                grade = "A";
+            } else if (score >= 70) {
+                grade = "B";
+            } else if (score >= 60) {
+                grade = "C";
+            } else if (score >= 50) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            //pass
+            if (score >= 50) {
+                pass = "ผ่าน";
+            } else {
+                pass = "ไม่ผ่าน";
+            }
+
+            // switch-case เพื่อให้คำอธิบายเกรด
+            switch (grade) {
+                case "A":
+                    description = "ยอดเยี่ยมมาก";
+                    break;
+                case "B":
+                    description = "ดีมาก รักษามาตรฐานไว้";
+                    break;
+                case "C":
+                    description = "ผ่านเกณฑ์ระดับดี";
+                    break;
+                case "D":
+                    description = "พอใช้ แต่ควรพัฒนาเพิ่ม";
+                    break;
+                case "F":
+                    description = "ต้องลงทะเบียนเรียนใหม่";
+                    break;
+                default:
+                    description = "-";
+            }
+
+            output.push("คะแนนที่สุ่มได้: " + score);
+            output.push("เกรด: " + grade);
+            output.push("ผลสอบ: " + pass);
+            output.push("คำอธิบาย: " + description);
+
+            document.getElementById("output").textContent = output.join("\n");
+
+            console.clear();
+            output.forEach(line => console.log(`> ${line}`));
+        }
+    </script>
+</body>
+</html>

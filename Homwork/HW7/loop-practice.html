@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Practice</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #output { 
+            background-color: #121212; 
+            color: #ffffff; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin-bottom: 10px;
+            white-space: pre-line; 
+            width: fit-content;
+            min-width: 250px;
+            border-left: 5px solid #e7ac21;
+            line-height: 1.5;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1e6177;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:active { background-color: #144a5b; }
+    </style>
+</head>
+<body>
+
+    <div id="output">ผลลัพธ์จะแสดงที่นี่</div>
+    <button onclick="runDemo()">Run Code</button>
+
+    <script>
+        function runDemo() {
+            const output = [];
+
+            let maxNumber = 15;
+
+            for (let i = 1; i <= maxNumber; i++) {
+                if (i % 2 == 0) {
+                    output.push(i + " (คู่)");
+                } else {
+                    output.push(i + " (คี่)");
+                }
+            }
+
+            for (let i = 0; i <= maxNumber; i+=2) {
+                output.push("นับทัละ 2: " + i);
+            }
+
+            for (let i = maxNumber; i >= 0; i--) {
+                output.push("นับถอยหลัง: " + i);
+            }
+
+            document.getElementById("output").textContent = output.join("\n");
+
+            console.clear();
+            output.forEach(line => console.log(`> ${line}`));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Check</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #output { 
+            background-color: #121212; 
+            color: #ffffff; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin-bottom: 10px;
+            white-space: pre-line; 
+            width: fit-content;
+            min-width: 200px;
+            border-left: 5px solid #e7ac21;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1e6177;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="output">ผลลัพธ์จะแสดงที่นี่</div>
+    <button onclick="runDemo()">Run Code</button>
+
+    <script>
+        function runDemo() {
+            const output = [];
+
+            let score = 62; 
+            let grade = "";
+            let pass = "";
+
+            //grade
+            if (score >= 80) {
+                grade = "A";
+            } else if (score >= 70) {
+                grade = "B";
+            } else if (score >= 60) {
+                grade = "C";
+            } else if (score >= 50) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            //pass
+            if (score >= 50) {
+                pass = "ผ่าน";
+            } else {
+                pass = "ไม่ผ่าน";
+            }
+
+            output.push("คะแนนที่สุ่มได้: " + score);
+            output.push("เกรด: " + grade);
+            output.push("ผลสอบ: " + pass);
+
+            document.getElementById("output").textContent = output.join("\n");
+
+            console.clear();
+            output.forEach(line => console.log(`> ${line}`));
+        }
+    </script>
+</body>
+</html>
